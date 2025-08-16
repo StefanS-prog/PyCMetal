@@ -6,24 +6,6 @@
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES"
       buildArchitectures = "Automatic">
-      <PostActions>
-         <ExecutionAction
-            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
-            <ActionContent
-               title = "Run Script"
-               scriptText = "mv &quot;${BUILT_PRODUCTS_DIR}/default.metallib&quot; &quot;${BUILT_PRODUCTS_DIR}/gpucompute.metallib&quot;&#10;">
-               <EnvironmentBuildable>
-                  <BuildableReference
-                     BuildableIdentifier = "primary"
-                     BlueprintIdentifier = "F87777C82E4E438C009BE07C"
-                     BuildableName = "libgpucompute.dylib"
-                     BlueprintName = "gpucompute"
-                     ReferencedContainer = "container:gpucompute.xcodeproj">
-                  </BuildableReference>
-               </EnvironmentBuildable>
-            </ActionContent>
-         </ExecutionAction>
-      </PostActions>
       <BuildActionEntries>
          <BuildActionEntry
             buildForTesting = "YES"
