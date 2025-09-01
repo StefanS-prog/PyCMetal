@@ -7,20 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F87777D12E4E443B009BE07C /* kernels.metal in Sources */ = {isa = PBXBuildFile; fileRef = F87777D02E4E443B009BE07C /* kernels.metal */; };
-		F87777D42E4E46FB009BE07C /* mandelbrot_set.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F87777D32E4E46FB009BE07C /* mandelbrot_set.cpp */; };
+		F836CCA02E64B38800DBF54A /* game_of_life.metal in Sources */ = {isa = PBXBuildFile; fileRef = F836CC9F2E64B38800DBF54A /* game_of_life.metal */; };
+		F862FA162E64CF5200292567 /* mandelbrot_set.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F87777D32E4E46FB009BE07C /* mandelbrot_set.cpp */; };
+		F87777D12E4E443B009BE07C /* mandelbrot_set.metal in Sources */ = {isa = PBXBuildFile; fileRef = F87777D02E4E443B009BE07C /* mandelbrot_set.metal */; };
 		F87777D52E4E46FB009BE07C /* mandelbrot_set.h in Headers */ = {isa = PBXBuildFile; fileRef = F87777D22E4E46FB009BE07C /* mandelbrot_set.h */; };
 		F87777DA2E4E4CD0009BE07C /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F87777D92E4E4CD0009BE07C /* Metal.framework */; };
 		F87777DC2E4E4D15009BE07C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F87777DB2E4E4D15009BE07C /* Foundation.framework */; };
+		F88B7BE92E6494CF00EB87AB /* game_of_life.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F88B7BE82E6494CF00EB87AB /* game_of_life.cpp */; };
+		F88B7BEA2E6494CF00EB87AB /* game_of_life.h in Headers */ = {isa = PBXBuildFile; fileRef = F88B7BE72E6494CF00EB87AB /* game_of_life.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F836CC9F2E64B38800DBF54A /* game_of_life.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = game_of_life.metal; sourceTree = "<group>"; };
 		F87777C92E4E438C009BE07C /* libgpucompute.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libgpucompute.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		F87777D02E4E443B009BE07C /* kernels.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = kernels.metal; sourceTree = "<group>"; };
+		F87777D02E4E443B009BE07C /* mandelbrot_set.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = mandelbrot_set.metal; sourceTree = "<group>"; };
 		F87777D22E4E46FB009BE07C /* mandelbrot_set.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; path = mandelbrot_set.h; sourceTree = "<group>"; };
 		F87777D32E4E46FB009BE07C /* mandelbrot_set.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = mandelbrot_set.cpp; sourceTree = "<group>"; };
 		F87777D92E4E4CD0009BE07C /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		F87777DB2E4E4D15009BE07C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F88B7BE72E6494CF00EB87AB /* game_of_life.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; path = game_of_life.h; sourceTree = "<group>"; };
+		F88B7BE82E6494CF00EB87AB /* game_of_life.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = game_of_life.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +47,10 @@
 			children = (
 				F87777D22E4E46FB009BE07C /* mandelbrot_set.h */,
 				F87777D32E4E46FB009BE07C /* mandelbrot_set.cpp */,
-				F87777D02E4E443B009BE07C /* kernels.metal */,
+				F88B7BE72E6494CF00EB87AB /* game_of_life.h */,
+				F88B7BE82E6494CF00EB87AB /* game_of_life.cpp */,
+				F87777D02E4E443B009BE07C /* mandelbrot_set.metal */,
+				F836CC9F2E64B38800DBF54A /* game_of_life.metal */,
 				F87777D82E4E4CD0009BE07C /* Frameworks */,
 				F87777CA2E4E438C009BE07C /* Products */,
 			);
@@ -72,6 +81,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F87777D52E4E46FB009BE07C /* mandelbrot_set.h in Headers */,
+				F88B7BEA2E6494CF00EB87AB /* game_of_life.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,8 +145,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F87777D42E4E46FB009BE07C /* mandelbrot_set.cpp in Sources */,
-				F87777D12E4E443B009BE07C /* kernels.metal in Sources */,
+				F862FA162E64CF5200292567 /* mandelbrot_set.cpp in Sources */,
+				F836CCA02E64B38800DBF54A /* game_of_life.metal in Sources */,
+				F88B7BE92E6494CF00EB87AB /* game_of_life.cpp in Sources */,
+				F87777D12E4E443B009BE07C /* mandelbrot_set.metal in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

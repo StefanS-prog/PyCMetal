@@ -2,6 +2,7 @@ from time import time
 from matplotlib import pyplot as plt
 import numpy as np
 from ctypes import *
+import sys
 
 gpucompute_dll = CDLL("./libgpucompute.dylib")
 mandelbrot_set_fn = gpucompute_dll.mandelbrot_set
@@ -31,5 +32,5 @@ print(f"Calculation duration: {duration:.3f} s")
 fig = plt.figure("Mandelbrot Set")
 original_size = fig.get_size_inches()
 fig.set_size_inches(original_size * 2)
-plt.imshow(mandelbrot_subset, extent=(-2, 2, -2, 2))
+plt.imshow(mandelbrot_subset, extent=(-2, 2, -2, 2), interpolation="none")
 plt.show()

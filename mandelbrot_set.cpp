@@ -31,8 +31,8 @@ void mandelbrot_set(const float *points, float *mandelbrot_subset, const struct 
     pMandelbrotFunction->release();
     pLibrary->release();
     
-    int points_size = sizeof(float) * p->points_count;
-    int subset_size = sizeof(float) * p->points_count * p->points_count;
+    size_t points_size = sizeof(float) * p->points_count;
+    size_t subset_size = sizeof(float) * p->points_count * p->points_count;
     
     MTL::Buffer *pPoints = pDevice->newBuffer(points_size, MTL::ResourceStorageModeShared);
     MTL::Buffer *pMandelbrotSubset = pDevice->newBuffer(subset_size, MTL::ResourceStorageModeShared);

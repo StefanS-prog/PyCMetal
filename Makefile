@@ -28,6 +28,7 @@ build:
 install: build
 	@echo "Installing the Metal library in $(METALLIB_DST) ..."
 	sudo install -m 644 $(METALLIB_SRC) $(METALLIB_DST)
+	sudo strip -x $(METALLIB_DST)
 
 	@echo "Installing the dynamic library in $(DYLIB_DST) ..."
 	sudo install -m 755 $(DYLIB_SRC) $(DYLIB_DST)
